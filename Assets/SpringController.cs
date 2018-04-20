@@ -7,6 +7,7 @@ public class SpringController : MonoBehaviour {
     public GameObject springDefault;
     public GameObject springRight;
     public GameObject springLeft;
+    public GameObject springOpen;
 
     Animator animatorD;
     Animator animatorR;
@@ -18,9 +19,10 @@ public class SpringController : MonoBehaviour {
         DEFAULT,
         RIGHT,
         LEFT,
+        OPEN,
     }
 
-    private SPEING_DIR springDir = SPEING_DIR.DEFAULT;
+    public SPEING_DIR springDir = SPEING_DIR.DEFAULT;
 
 	// Use this for initialization
 	void Start ()
@@ -40,6 +42,10 @@ public class SpringController : MonoBehaviour {
         {
             PushLeftButton();
         }
+        else if (Input.GetKey(KeyCode.DownArrow))
+        {
+            PushOpenButton();
+        }
         else
         {
             ReleaseButton();
@@ -54,16 +60,25 @@ public class SpringController : MonoBehaviour {
                 springDefault.SetActive(true);
                 springRight.SetActive(false);
                 springLeft.SetActive(false);
+                springOpen.SetActive(false);
                 break;
             case SPEING_DIR.RIGHT:
                 springDefault.SetActive(false);
                 springRight.SetActive(true);
                 springLeft.SetActive(false);
+                springOpen.SetActive(false);
                 break;
             case SPEING_DIR.LEFT:
                 springDefault.SetActive(false);
                 springRight.SetActive(false);
                 springLeft.SetActive(true);
+                springOpen.SetActive(false);
+                break;
+            case SPEING_DIR.OPEN:
+                springDefault.SetActive(false);
+                springRight.SetActive(false);
+                springLeft.SetActive(false);
+                springOpen.SetActive(true);
                 break;
         }
 	}
@@ -81,5 +96,22 @@ public class SpringController : MonoBehaviour {
     public void ReleaseButton()
     {
         springDir = SPEING_DIR.DEFAULT;
+    }
+
+    public void PushOpenButton()
+    {
+        springDir = SPEING_DIR.OPEN;
+    }
+
+
+    //Bound.cs 用のメソッド
+    public SPEING_DIR Right()
+    {
+        return SPEING_DIR.RIGHT;
+    }
+
+    public SPEING_DIR Left()
+    {
+        return SPEING_DIR.LEFT;
     }
 }
