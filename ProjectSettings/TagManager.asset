@@ -3,7 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - EnemyArm
+  - EventTrigger
+  - Item
+  - Object
+  - DestroyObject
+  - Enemy
+  - Road
+  - CameraTrigger
+  - EnemyBody
+  - PlayerBody
+  - PlayerArm
+  - SubCamera
+  - Animal
+  - Human
   layers:
   - Default
   - TransparentFX
