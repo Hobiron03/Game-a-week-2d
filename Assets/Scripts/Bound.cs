@@ -62,17 +62,16 @@ public class Bound : MonoBehaviour {
         {
             if (1 <= iRandomNum && iRandomNum <= 4)
             {
-                Debug.Log("一番で買い");
                 shotBody.AddForce(randomR1);
             }
             else if (5 <= iRandomNum && iRandomNum <= 8)
             {
-                Debug.Log("2");
+        
                 shotBody.AddForce(randomR2);
             }
             else
             {
-                Debug.Log("3");
+              
                 shotBody.AddForce(randomR3);
             }
 
