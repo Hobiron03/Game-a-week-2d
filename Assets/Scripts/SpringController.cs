@@ -114,4 +114,9 @@ public class SpringController : MonoBehaviour {
     {
         return SPEING_DIR.LEFT;
     }
+
+    public SPEING_DIR Dfault()
+    {
+        return SPEING_DIR.DEFAULT;
+    }
 }
