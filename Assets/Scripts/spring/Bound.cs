@@ -18,11 +18,11 @@ public class Bound : MonoBehaviour {
     int iRandomNum = 0;
     Vector2 randomR1 = new Vector2(200.0f, 530.0f);
     Vector2 randomR2 = new Vector2(200.0f, 700.0f);
-    Vector2 randomR3 = new Vector2(300.0f, 300.0f);
+    Vector2 randomR3 = new Vector2(200.0f, 660.0f);
 
     Vector2 randomL1 = new Vector2(-200.0f, 430.0f);
     Vector2 randomL2 = new Vector2(-200.0f, 600.0f);
-    Vector2 randomL3 = new Vector2(-200.0f, 300.0f);
+    Vector2 randomL3 = new Vector2(-200.0f, 660.0f);
 
     SpringController springController;
 
@@ -42,11 +42,6 @@ public class Bound : MonoBehaviour {
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-       
-        
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
