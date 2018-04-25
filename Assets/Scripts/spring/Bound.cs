@@ -8,6 +8,8 @@ public class Bound : MonoBehaviour {
     public GameObject childSpring2;
     public GameObject springs;
 
+    public GameObject boundedObject;
+
     public AudioClip audioClip;
 
     Animator animator1;
@@ -94,7 +96,7 @@ public class Bound : MonoBehaviour {
 
     IEnumerator ColliderOn(GameObject fallObject)
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.1f);
 
         fallObject.GetComponent<BoxCollider2D>().enabled = true;
     }
@@ -103,8 +105,8 @@ public class Bound : MonoBehaviour {
     {
         collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
 
-        StartCoroutine("ColliderOn", collision.gameObject);
+        collision.GetComponent<wasBoundedController>().TriggerOn();
     }
-
+    
     
 }

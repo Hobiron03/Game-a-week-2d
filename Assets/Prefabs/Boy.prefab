@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 95013743116326008}
   - component: {fileID: 50714566137297890}
   - component: {fileID: 61804977363311330}
+  - component: {fileID: 114140610609609942}
   m_Layer: 8
   m_Name: Boy
   m_TagString: Human
@@ -105,6 +106,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114140610609609942
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1828413587879944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be46aecf27323e346a74f5405fd78bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212398737446398610
 SpriteRenderer:
   m_ObjectHideFlags: 1
